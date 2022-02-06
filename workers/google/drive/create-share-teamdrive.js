@@ -1,6 +1,5 @@
 var authConfig = {
   version: "1.0.1-fix1",
-  dailyLimit: true, // 是否限制每一个邮箱每天只能提交一次请求
   client_id: "",
   client_secret: "",
   refresh_token: "", // 授权 token
@@ -53,33 +52,29 @@ var html = `
              ? ` <h5>本站团队盘域为:  ${authConfig.domain}</h5>`
              : ""
          }
-            <p>
-              后端多个API请求, 过程耗时较长, 请耐心等待,
-              <span style="color: red"><b>切勿重复提交</b></span>
-            </p>
             <br />
             <div class="info-form text-left">
               <form id="teamDriveForm">
                 <div class="form-group">
                   <label for="teamDriveName" class="sr-only">
-                    TeamDrive 名称
+                    TeamDrive 名稱
                   </label>
                   <input
                     type="text"
                     class="form-control"
                     id="teamDriveName"
-                    placeholder="TeamDrive 名称"
+                    placeholder="TeamDrive 名稱"
                   />
                 </div>
                 <div class="form-group">
                   <label for="emailAddress" class="sr-only">
-                    您的GMail邮箱地址
+                    您的GMail信箱地址
                   </label>
                   <input
                     type="email"
                     class="form-control"
                     id="emailAddress"
-                    placeholder="您的GMail邮箱地址"
+                    placeholder="您的GMail信箱地址"
                   />
                 </div>
                 <div class="form-check">
@@ -90,7 +85,7 @@ var html = `
                     value=""
                   />
                   <label class="form-check-label" for="customTheme">
-                    自定TeamDrive主题头图
+                    自定TeamDrive圖案
                   </label>
                 </div>
                 <div id="customThemeSection" class="d-none">
@@ -109,7 +104,7 @@ var html = `
                         class="form-check-label"
                         for="teamDriveThemeOptionRandom"
                       >
-                        随机
+                        隨機
                       </label>
                     </div>
                   </div>
@@ -134,11 +129,11 @@ var html = `
           <div class="modal-body text-center">
             <div class="d-flex justify-content-center">
               <div class="spinner-border" role="status">
-                <span class="sr-only">正在创建中...</span>
+                <span class="sr-only">正在創建中...</span>
               </div>
             </div>
             <div clas="loader-txt">
-              <p>正在创建中...</p>
+              <p>正在創建中...</p>
             </div>
           </div>
         </div>
